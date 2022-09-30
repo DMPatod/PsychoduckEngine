@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 add_subdirectory("include")
 
 # Add source to this project's executable.
-add_library(PsyduckEngine SHARED "src/PsyduckEngine.h" "src/Core/Application.h" "src/Core/Application.cpp" "src/Core/Base.h" "src/Core/EntryPoint.h" "src/Core/Log.h" "src/Core/Log.cpp")
+add_library(PsyduckEngine SHARED "src/PsyduckEngine.h" "src/Core/Application.h" "src/Core/Application.cpp" "src/Core/Base.h" "src/Core/EntryPoint.h" "src/Core/Log.h" "src/Core/Log.cpp" "src/Core/KeyCodes.h" "src/Events/Event.h" "src/Events/KeyEvent.h" "src/Events/MouseEvent.h" "src/Core/MouseCodes.h" "src/Events/ApplicationEvent.h")
 
 target_link_libraries(PsyduckEngine spdlog)
 

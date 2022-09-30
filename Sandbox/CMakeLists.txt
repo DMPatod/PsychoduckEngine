@@ -5,6 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
 add_executable(Sandbox "src/Application.cpp")
+
+file(COPY "${CMAKE_BINARY_DIR}/PsyduckEngine/PsyduckEngine.dll" DESTINATION "${CMAKE_BINARY_DIR}/Sandbox")
 target_include_directories(Sandbox PUBLIC "${PROJECT_SOURCE_DIR}/PsyduckEngine/src")
 target_link_libraries(Sandbox PsyduckEngine)
 
