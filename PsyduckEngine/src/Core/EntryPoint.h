@@ -4,6 +4,7 @@
 
 extern PsyduckEngine::Application* PsyduckEngine::CreateApplication();
 
+
 int main(int argc, char** argv) {
 	PsyduckEngine::Log::Init();
 
