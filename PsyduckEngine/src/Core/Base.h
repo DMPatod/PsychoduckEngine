@@ -1,8 +1,6 @@
 #pragma once
 
 #include <filesystem>
-#include <memory>
-#include <string>
 
 #ifdef PsyduckEngine_EXPORTS
 #define PsyduckEngine_API __declspec(dllexport)
