@@ -4,7 +4,6 @@
 
 extern PsyduckEngine::Application* PsyduckEngine::CreateApplication();
 
-
 int main(int argc, char** argv) {
 	PsyduckEngine::Log::Init();
 
@@ -13,4 +12,6 @@ int main(int argc, char** argv) {
 	auto app = PsyduckEngine::CreateApplication();
 	app->Run();
 	delete app;
+
+	return 0;
 }

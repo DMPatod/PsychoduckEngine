@@ -12,6 +12,10 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Core/Base.h"
+
+#include "Core/Log.h"
+
 #ifdef PsyduckEngine_BUILD_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif

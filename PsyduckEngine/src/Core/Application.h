@@ -2,20 +2,17 @@
 
 #include "Base.h"
 
-int main(int argc, char** argv);
+#include "Window.h"
 
 namespace PsyduckEngine {
-	class Application {
+	class PsyduckEngine_API Application {
 	public:
-		Application() {};
+		Application();
 		virtual ~Application() {};
-		
-	private:
-		void Run() {
-			while (m_Running) {}
-		}
 
-		friend int ::main(int argc, char** argv);
+		void Run();
+	private:
+		Scope<Window> m_Window;
 
 		bool m_Running = true;
 	};

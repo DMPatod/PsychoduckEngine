@@ -3,10 +3,15 @@
 add_subdirectory("include")
 
 # project's executable.
-add_library(PsyduckEngine SHARED "src/PsyduckEngine.h" "src/Core/Application.h" "src/Core/Application.cpp" "src/Core/Base.h" "src/Core/EntryPoint.h" "src/Core/Log.h" "src/Core/Log.cpp" "src/Core/KeyCodes.h" "src/Events/Event.h" "src/Events/KeyEvent.h" "src/Events/MouseEvent.h" "src/Core/MouseCodes.h" "src/Events/ApplicationEvent.h" )
+add_library(PsyduckEngine SHARED "src/PsyduckEngine.h" "src/Core/Application.h" "src/Core/Application.cpp" "src/Core/Base.h" "src/Core/EntryPoint.h" "src/Core/Log.h" "src/Core/Log.cpp" "src/Core/KeyCodes.h" "src/Events/Event.h" "src/Events/KeyEvent.h" "src/Events/MouseEvent.h" "src/Core/MouseCodes.h" "src/Events/ApplicationEvent.h"  "src/Core/Window.h" "src/Core/Window.cpp" "src/PlatformEspecifics/Windows/WindowsWindow.h" "src/PlatformEspecifics/Windows/WindowsWindow.cpp")
 
 target_precompile_headers(PsyduckEngine PUBLIC "src/pepch.h")
+
 target_link_libraries(PsyduckEngine spdlog)
+
+target_link_libraries(PsyduckEngine SDL2)
+target_link_libraries(PsyduckEngine SDL2main)
+target_link_libraries(PsyduckEngine Opengl32)
 
 target_include_directories(PsyduckEngine PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>" "$<INSTALL_INTERFACE:include>")
 
@@ -18,6 +23,10 @@ endif()
 
 if(WIN32)
 	target_compile_definitions(PsyduckEngine PUBLIC PsyduckEngine_BUILD_PLATFORM_WINDOWS ON)
+endif()
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+	#target_compile_definitions(PsyduckEngine PUBLIC ENABLE_ASSERTS)
 endif()
 
 #define obj and bin dir
