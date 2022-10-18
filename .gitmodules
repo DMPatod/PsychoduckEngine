@@ -1,0 +1,9 @@
+[submodule "spdlog"]
+	path = PsychoduckEngine/include/spdlog-1.10.0
+	url = https://github.com/gabime/spdlog.git
+  branch = v1.10.0
+
+[submodule "SDL2"]
+	path = PsychoduckEngine/include/SDL2-2.24.1
+	url = git://bar.com/git/lib.git
+  branch = release-2.24.1
