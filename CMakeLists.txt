@@ -3,8 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("PsyduckEngine")
+project ("PsychoduckEngine")
 
 # Include sub-projects.
-add_subdirectory ("PsyduckEngine")
+add_subdirectory ("PsychoduckEngine")
 add_subdirectory ("Sandbox")

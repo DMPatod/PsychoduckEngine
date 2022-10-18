@@ -1,11 +1,11 @@
-#include <PsyduckEngine.h>
+#include <PsychoduckEngine.h>
 
-class Application : public PsyduckEngine::Application {
+class Application : public PsychoduckEngine::Application {
 public: 
 	Application() {}
 	~Application() {}
 };
 
-PsyduckEngine::Application* PsyduckEngine::CreateApplication() {
+PsychoduckEngine::Application* PsychoduckEngine::CreateApplication() {
 	return new Application();
 }
