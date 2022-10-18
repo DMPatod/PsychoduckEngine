@@ -5,5 +5,5 @@
 
 [submodule "SDL2"]
 	path = PsychoduckEngine/include/SDL2-2.24.1
-	url = git://bar.com/git/lib.git
+	url = https://github.com/libsdl-org/SDL.git
   branch = release-2.24.1
